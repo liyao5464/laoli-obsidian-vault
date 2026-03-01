@@ -6,23 +6,11 @@
 
 ---
 
-## 先说说我的痛点
+## 从一篇文章开始
 
-我写公众号有一段时间了，文章也发了几十篇。
+有人用 **OpenClaw + Obsidian** 搭了一套内容工厂，说可以实现7x24小时自动生产内容，单篇文章能卖到6000块。
 
-但有一个问题一直困扰我：**每次让AI帮我写新文章，它都像第一次见我一样。**
-
-不知道我的写作风格，不知道我写过什么话题，不知道我上周收藏了哪篇好文章。
-
-我的素材散落在各处——有的在微信收藏，有的在备忘录，有的在某个文件夹里，再也找不到了。
-
-每次写文章，都要重新"教"AI一遍。
-
-这他妈也太低效了。
-
----
-
-## 然后我看到了这篇文章
+我当时的反应是：吹牛吧？
 
 有人用 **OpenClaw + Obsidian** 搭了一套内容工厂，说可以实现7x24小时自动生产内容，单篇文章能卖到6000块。
 
@@ -40,55 +28,77 @@
 
 ---
 
-## 然后我就开始踩坑了（Windows 用户专属）
+## 然后我就开始踩坑了
 
-### 坑一：Windows 上的 curl 根本不是 curl
+### 坑一：搭完才发现，原文的方案根本不适用我
 
-搭建过程中需要手动安装一个插件，我让AI给了我一行命令：
+按照原文，我把服务器上的 Vault 建好了，目录结构也搭好了，软链接也连上了。
+
+然后我问了一句：**那我本地的 Obsidian 怎么办？**
+
+这才发现一个原文完全没提到的问题——
+
+原文作者的 OpenClaw 是装在本地 Mac 上的。Obsidian 和 OpenClaw 在同一台机器，直接用软链接就搞定了，根本不存在"同步"这个问题。
+
+但我的情况不一样：**OpenClaw 在云服务器上，Obsidian 在本地 Windows，两台机器。**
+
+原文的方案，直接套不上。
+
+我把这个问题抛给了 OpenClaw，它给了我一个解法：**用 GitHub 做中转**。
+
+```
+本地 OB ←→ GitHub repo ←→ 服务器 Vault
+```
+
+服务器每10分钟推一次，本地 OB 每5分钟拉一次，基本实时同步。
+
+这个方案原文没有，是我们现场想出来的。
+
+### 坑二：Windows 上的 curl 根本不是 curl
+
+搭建过程中需要手动安装 obsidian-git 插件，我让 OpenClaw 给了我命令：
 
 ```
 curl -L https://github.com/... -o main.js
 ```
 
-我直接粘进 PowerShell，报错了。
+粘进 PowerShell，直接报错：
 
 ```
 Invoke-WebRequest : 找不到与参数名称"L"匹配的参数
 ```
 
-搞了半天才明白：**Windows PowerShell 里的 `curl` 其实是 `Invoke-WebRequest` 的别名**，根本不支持 `-L` 这个参数。
+搞了半天才明白：**Windows PowerShell 里的 `curl` 其实是 `Invoke-WebRequest` 的别名**，根本不支持 `-L` 参数。
 
-正确的写法是：
+正确写法是：
 
 ```powershell
 Invoke-WebRequest -Uri "https://github.com/..." -OutFile "main.js"
 ```
 
-这个坑，Mac 用户永远不会踩，但 Windows 用户一定会踩。
+Mac 用户永远不会踩这个坑，但 Windows 用户一定会。
 
-### 坑二：obsidian-git 插件搜不到
+### 坑三：obsidian-git 搜不到 + SSL 连接失败
 
-我打开 Obsidian，进插件市场，搜 `obsidian-git`，什么都没有。
-
-以为是网络问题，刷新了好几次，还是没有。
+装好插件，打开 Obsidian 插件市场搜 `obsidian-git`，什么都没有。
 
 后来才发现：**Obsidian 默认开启"安全模式"，第三方插件全部屏蔽。**
 
 要先去 设置 → 第三方插件 → 关闭安全模式，才能搜到。
 
-### 坑三：定时任务一直报错
-
-我设置了一个每10分钟自动同步的定时任务，结果一直失败，报错信息是：
+装好之后，点 Push，又报错了：
 
 ```
-LLM request rejected: We're unable to verify your membership benefits at this time.
+fatal: schannel: failed to receive handshake, SSL/TLS connection failed
 ```
 
-查了半天，原来是**模型权限问题**。
+这是 Windows Git 的 SSL 后端问题，一行命令解决：
 
-OpenClaw 的定时任务在隔离环境里运行，默认模型（newcli/claude-sonnet）在这个环境里验证不了会员资格。
+```powershell
+git config --global http.sslBackend openssl
+```
 
-解决方法：把定时任务的模型改成 `minimax/MiniMax-M2.5`，问题立刻消失。
+改完重新 Push，通了。
 
 ---
 
