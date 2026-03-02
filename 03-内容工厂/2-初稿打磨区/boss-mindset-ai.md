@@ -49,6 +49,8 @@
 
 ---
 
+![龙虾能干什么](/root/.openclaw/media/boss-levels.png)
+
 ## 龙虾怎么用？三个层次
 
 很多人装好OpenClaw，就停在第一层了。
@@ -85,6 +87,8 @@
 差别在哪？在你有没有老板思维。
 
 ---
+
+![老板思维三件事](/root/.openclaw/media/boss-mindset-tips.png)
 
 ## 老板思维是什么？
 
