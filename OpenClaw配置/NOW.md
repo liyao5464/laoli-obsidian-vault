@@ -1,47 +1,36 @@
-# NOW.md - 当前状态仪表盘
+# NOW.md - 当前状态（2026-03-03）
 
-> ⚠️ 这是唯一允许覆写的记忆文件。每次 heartbeat 更新。
+## 今日完成 ✅
 
-## 今天 (2026-02-28)
+1. **发布 OpenClaw 插件推荐文章**
+   - 草稿ID: pV9s6k_fIwloQ3r9KEJtFUAOWvXhJ3j8gojUtuPKuHXOiq4yJ0on2VZQTlbzndt-
+   - 位置：实验室小号
 
-- ✅ 《内容创作者的Agent搭建实录》发布到实验室小号
-  - media_id: pV9s6k_fIwloQ3r9KEJtFfb1ZHcnY_dS1dE82wdQyPeJj58KRoTIHIvf4hXGRDT9
-  - 5张手绘风格配图已上传
-  - 标题需在后台修改（当前是agent-guide-v2）
-- ✅ 配图风格确定：手绘笔记/白板草图风格
-  - 线条简单、颜色柔和、不花哨
-  - 像人手随手画的
+2. **短剧文章初稿完成**
+   - 标题：《投了50万拍短剧的朋友，昨天找我借钱了》
+   - 状态：已生成5张配图，已排版，已创建草稿
+   - 草稿ID: pV9s6k_fIwloQ3r9KEJtFfWyymLi13Bcgx2td7GO2PaO8mz8M4d5IFRzlZxDW4gb
+   - 待发布：实验室小号
 
-## 昨天完成 (2026-02-27)
+3. **工作流程优化**
+   - 实现微信公众号自动插入配图功能
+   - 更新 SOP_GZH.md 加入自动配图流程
 
-- ✅ DeepSeek×英伟达两版文章（冷静版+燃文版）→ 小号草稿
-- ✅ 武汉AI政策A选题（OPC一人公司）→ 小号草稿已发
-- ✅ 武汉AI政策B选题（智慧校园老师视角）→ 大号初稿已发老里审阅
-- ✅ 学习 Ray Wang 记忆架构文章
-- ✅ 记忆系统升级（三层架构改造）
+4. **创建 CLAUDE.md**
+   - OpenClaw 版本：/root/.openclaw/workspace/CLAUDE.md
+   - Claude Code 版本：/root/Documents/laoli-content/CLAUDE.md
 
-## 当前阻塞
+## 待办事项 📋
 
-- 无
+- [ ] 短剧文章发布到实验室小号
+- [ ] OpenClaw 插件文章发布
 
-## P0 优先级
+## 重要发现 💡
 
-| # | 事项 | 状态 | 备注 |
-|---|---|------|------|
-| P0 | 小号文章标题修改 | 待确认 | 老里去后台改标题 |
-| P1 | NotebookLM 文章选题 | 待定 | 老里还没选角度 |
-| P1 | OpenClaw 学科教研组部署教程 | 待写 | HEARTBEAT 跟进中 |
+1. **写作真实性**：避免太完美的故事，要有真实细节和情绪
+2. **自动配图**：可以在HTML中直接引用微信素材库URL
+3. **Obsidian Git冲突**：关闭自动Pull，改为手动同步
 
-## Agent 状态
+## 当前焦点 🎯
 
-| Agent | 当前任务 |
-|-------|----------|
-| main (小知了) | 待命，配图风格已确定 |
-
-## 关键记忆
-
-- **配图风格**：手绘笔记/白板草图 —— 线条简单、柔和配色、不花哨
-- **抓取微信文章**：curl + iPhone UA + python解析id="js_content"
-
----
-*Updated: 2026-02-28 23:45*
+内容创作自动化优化中
