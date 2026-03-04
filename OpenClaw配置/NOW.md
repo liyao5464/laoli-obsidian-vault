@@ -1,36 +1,57 @@
-# NOW.md - 当前状态（2026-03-03）
+# NOW.md — 当前状态
 
-## 今日完成 ✅
+*最后更新：2026-03-04 15:45 UTC*
 
-1. **发布 OpenClaw 插件推荐文章**
-   - 草稿ID: pV9s6k_fIwloQ3r9KEJtFUAOWvXhJ3j8gojUtuPKuHXOiq4yJ0on2VZQTlbzndt-
-   - 位置：实验室小号
+## 📋 今日完成
 
-2. **短剧文章初稿完成**
-   - 标题：《投了50万拍短剧的朋友，昨天找我借钱了》
-   - 状态：已生成5张配图，已排版，已创建草稿
-   - 草稿ID: pV9s6k_fIwloQ3r9KEJtFfWyymLi13Bcgx2td7GO2PaO8mz8M4d5IFRzlZxDW4gb
-   - 待发布：实验室小号
+### 内容生产
+- ✅ AI记忆系统文章（3500字，对标Shubham Saboo）
+- ✅ OpenClaw新手入门文章（2800字，对标AI_jacksaku）
+- ✅ 两篇文章各5张简笔插画配图
+- ✅ 两篇文章发布到实验室小号
 
-3. **工作流程优化**
-   - 实现微信公众号自动插入配图功能
-   - 更新 SOP_GZH.md 加入自动配图流程
+### 技能安装
+- ✅ skill-vetter（安全检查）
+- ✅ self-improving-agent（自我提升）
+- ✅ daily-news-report（每日新闻）
+- ✅ daily-report（工作日报）
+- ✅ search/Tavily（网络搜索）
+- ✅ x-tweet-fetcher（推文抓取）
+- ✅ Tavily API配置完成
 
-4. **创建 CLAUDE.md**
-   - OpenClaw 版本：/root/.openclaw/workspace/CLAUDE.md
-   - Claude Code 版本：/root/Documents/laoli-content/CLAUDE.md
+### 自动化
+- ✅ Vault同步改为每6小时一次
+- ✅ 今日AI热点推送（5条）
+- ✅ 伊朗局势深度搜索
 
-## 待办事项 📋
+### 素材积累
+- ✅ OpenClaw救助指南（水月）
+- ✅ OpenClaw语音Skill（NoizAI）
+- ✅ 智能体文件系统架构（Shubham Saboo）
+- ✅ X文章：OpenClaw新手入门（AI_jacksaku）
 
-- [ ] 短剧文章发布到实验室小号
-- [ ] OpenClaw 插件文章发布
+## 📅 待办
 
-## 重要发现 💡
+### 文章
+- [ ] 内容工厂搭建教程
+- [ ] AI失忆问题
+- [ ] 国产AI横评
+- [ ] Trae零代码编程
 
-1. **写作真实性**：避免太完美的故事，要有真实细节和情绪
-2. **自动配图**：可以在HTML中直接引用微信素材库URL
-3. **Obsidian Git冲突**：关闭自动Pull，改为手动同步
+### 待发布
+- 实验室小号草稿：OpenClaw救助、OpenClaw新手入门
 
-## 当前焦点 🎯
+## 🔧 技能配置
 
-内容创作自动化优化中
+### 已安装技能
+- skill-vetter, self-improving-agent, daily-news-report, daily-report, search, x-tweet-fetcher
+
+### API配置
+- Tavily: ✅ 已配置
+
+## 📊 关键指标
+
+- 今日文章：2篇
+- 今日配图：10张
+- 今日素材：4篇
+- 今日技能：7个
