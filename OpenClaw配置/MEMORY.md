@@ -37,6 +37,8 @@
 | 写作方法论 | `memory/lessons/writing-methodology.md` | 结构+标题公式 |
 | 记忆架构 | `memory/lessons/openclaw-memory-arch.md` | Token优化 |
 | 双账号决策 | `memory/decisions/2026-02-14-dual-accounts.md` | 账号配置 |
+| 微信文章抓取 | `memory/lessons/wechat-article-scraping.md` | 工具+方法 |
+| 配图生成技巧 | `memory/lessons/image-generation-tips.md` | 方向+风格 |
 
 ## 冷存储索引（用到再读）
 
