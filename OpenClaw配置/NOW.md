@@ -1,57 +1,41 @@
-# NOW.md — 当前状态
+# NOW.md - 当前状态
 
-*最后更新：2026-03-04 15:45 UTC*
+*最后更新：2026-03-05*
+
+## 🚨 紧急待办
+
+- [ ] 李微朋友圈推送：明天早上7点检查是否正常推送
+- [ ] video-director好话任务：检查是否完成
 
 ## 📋 今日完成
 
-### 内容生产
-- ✅ AI记忆系统文章（3500字，对标Shubham Saboo）
-- ✅ OpenClaw新手入门文章（2800字，对标AI_jacksaku）
-- ✅ 两篇文章各5张简笔插画配图
-- ✅ 两篇文章发布到实验室小号
+- [x] OpenClaw tools配置研究 + 完整配置
+- [x] subagents.allowAgents配置
+- [x] 跨agent通信测试（8个agent说好话）
+- [x] bindings配置尝试（已恢复）
+- [x] 每日记忆提炼
 
-### 技能安装
-- ✅ skill-vetter（安全检查）
-- ✅ self-improving-agent（自我提升）
-- ✅ daily-news-report（每日新闻）
-- ✅ daily-report（工作日报）
-- ✅ search/Tavily（网络搜索）
-- ✅ x-tweet-fetcher（推文抓取）
-- ✅ Tavily API配置完成
+## 📅 计划中
 
-### 自动化
-- ✅ Vault同步改为每6小时一次
-- ✅ 今日AI热点推送（5条）
-- ✅ 伊朗局势深度搜索
+- [ ] 标准化"内容创作者包"技能包
+- [ ] 美妆竞品分析系统搭建（coder负责）
+- [x] 10个agent团队配置完成
 
-### 素材积累
-- ✅ OpenClaw救助指南（水月）
-- ✅ OpenClaw语音Skill（NoizAI）
-- ✅ 智能体文件系统架构（Shubham Saboo）
-- ✅ X文章：OpenClaw新手入门（AI_jacksaku）
+## 💡 今日教训
 
-## 📅 待办
+1. OpenClaw tools配置需要完整：`exec.ask: "off"` 是关键
+2. Bot配置和bindings需要同时有username才能工作
+3. subagent有5个并发限制
 
-### 文章
-- [ ] 内容工厂搭建教程
-- [ ] AI失忆问题
-- [ ] 国产AI横评
-- [ ] Trae零代码编程
+## 🔧 配置状态
 
-### 待发布
-- 实验室小号草稿：OpenClaw救助、OpenClaw新手入门
+- tools配置：✅ 已添加完整配置
+- subagents.allowAgents：✅ 已配置["*"]
+- bindings配置：❌ 保持原状（未修改）
+- 10个agent：✅ 已配置Bot和定时任务
 
-## 🔧 技能配置
+## 📊 数据
 
-### 已安装技能
-- skill-vetter, self-improving-agent, daily-news-report, daily-report, search, x-tweet-fetcher
-
-### API配置
-- Tavily: ✅ 已配置
-
-## 📊 关键指标
-
-- 今日文章：2篇
-- 今日配图：10张
-- 今日素材：4篇
-- 今日技能：7个
+- 主号文章：151篇草稿
+- 实验号文章：21篇草稿
+- 定时任务：10+个
