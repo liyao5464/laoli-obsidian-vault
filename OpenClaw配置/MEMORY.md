@@ -26,6 +26,23 @@
 - 结尾：固定"感恩三连"模板
 - 禁止：书面腔、被动句、AI味、说教
 
+## Agent团队（10个已上线）
+
+| agentId | 名字 | 职责 |
+|---------|------|------|
+| main | 小助里🦐 | 统筹全局、私人助理 |
+| director | 内容总监✍️ | 每日选题、新闻推送 |
+| libi | 李笔📝 | Twitter/X内容 |
+| liwei | 李微📱 | 朋友圈运营（每天3次） |
+| coder | AI工程师💻 | 编程开发 |
+| nanny | 育儿师👶 | 育儿问答 |
+| video-director | 视频总监🎬 | 视频脚本 |
+| huatuo | AI华佗🏥 | OpenClaw运维、系统健康监控 |
+| swjc | 赛博诸葛🧙 | 策略分析 |
+| xhs | 小红书运营📷 | 小红书内容 |
+
+联系方式：`sessions_send(agentId="xxx", message="...")`
+
 ## 知识库索引（按需加载）
 
 > 详细内容见 `memory/INDEX.md`，启动时扫描导航，按需读子文件。
@@ -34,12 +51,14 @@
 |------|------|------|
 | 人物画像 | `memory/people/laoli-profile.md` | 老里基本信息 |
 | 用户偏好 | `memory/preferences/laoli-preferences.md` | 写作风格+禁止项 |
+| 朋友圈偏好 | `memory/preferences/moments-preferences.md` | 发送格式+内容形式 |
 | 发布经验 | `memory/lessons/wechat-publishing.md` | 流程+踩坑 |
 | 写作方法论 | `memory/lessons/writing-methodology.md` | 结构+标题公式 |
 | 记忆架构 | `memory/lessons/openclaw-memory-arch.md` | Token优化 |
 | 双账号决策 | `memory/decisions/2026-02-14-dual-accounts.md` | 账号配置 |
 | 微信文章抓取 | `memory/lessons/wechat-article-scraping.md` | 工具+方法 |
 | 配图生成技巧 | `memory/lessons/image-generation-tips.md` | 方向+风格 |
+| 朋友圈发送格式 | `memory/lessons/moments-send-format.md` | 代码块+复制按钮 |
 
 ## 冷存储索引（用到再读）
 

@@ -75,20 +75,22 @@
 
 | agentId | 名字 | 职责 | 启动读取 | 联系方式 |
 |---------|------|------|----------|---------|
-| `main` | 小虾米 🦐 | 统筹全局、私人助理 | `SOUL.md` + `USER.md` + `MEMORY.md` | `sessions_send(agentId="main", ...)` |
+| `main` | 小助里 🦐 | 统筹全局、私人助理 | `SOUL.md` + `USER.md` + `MEMORY.md` | `sessions_send(agentId="main", ...)` |
 | `director` | 内容总监 ✍️ | 每日选题、新闻推送、内容策划 | `agents/director/README.md` | `sessions_send(agentId="director", ...)` |
 | `libi` | 李笔 📝 | Twitter/X 内容创作与发布 | `agents/libi/README.md` | `sessions_send(agentId="libi", ...)` |
+| `liwei` | 李微 📱 | 微信朋友圈运营（每天3次自动生成） | `agents/liwei/README.md` | `sessions_send(agentId="liwei", ...)` |
 | `coder` | AI工程师 💻 | 编程开发、代码调试、技术实现 | `workspace-coder/AGENTS.md` | `sessions_send(agentId="coder", ...)` |
+| `nanny` | 育儿师 👶 | 育儿知识问答 | `workspace-nanny/AGENTS.md` | `sessions_send(agentId="nanny", ...)` |
+| `video-director` | 视频总监 🎬 | 视频脚本、分镜 | `workspace-video-director/AGENTS.md` | `sessions_send(agentId="video-director", ...)` |
+| `huatuo` | AI华佗 🏥 | OpenClaw运维、系统健康监控 | `workspace-huatuo/AGENTS.md` | `sessions_send(agentId="huatuo", ...)` |
+| `swjc` | 赛博诸葛 🧙 | 策略分析、决策建议 | `workspace-swjc/AGENTS.md` | `sessions_send(agentId="swjc", ...)` |
+| `xhs` | 小红书运营 📷 | 小红书内容创作与发布 | `workspace-xhs/AGENTS.md` | `sessions_send(agentId="xhs", ...)` |
 
 ### 🚧 规划中（未上线）
 
 | agentId | 名字 | 职责 | 状态 |
 |---------|------|------|------|
-| `nanny` | 育儿师 👶 | 育儿知识问答 | 待配置 |
-| `video-director` | 视频总监 🎬 | 视频脚本、分镜 | 待配置 |
-| `liwei` | 李微 📱 | 微博/小红书运营 | 待配置 |
 | `zhihu` | 李乎 💡 | 知乎内容运营 | 待配置 |
-| `huatuo` | AI华佗 🏥 | 健康咨询 | 待配置 |
 
 ### 协作规范
 
