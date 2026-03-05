@@ -7,6 +7,7 @@
 - HTML转换：使用 baoyu-post-to-wechat 技能自动处理
 - 封面提示词要简洁，太复杂会超时
 - 写文章前必读 `writing-guide.md` + `style-agent.md`
+- **发布主题：默认使用 claude 主题**（温润卡其色底，适合深度长文）
 
 ## 双账号
 
