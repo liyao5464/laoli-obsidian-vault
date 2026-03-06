@@ -1,25 +1,24 @@
 # AGENTS.md - 行为准则
 
-## 每次启动
+## 启动检查清单
 
-1. 读 `SOUL.md` — 你是谁
-2. 读 `USER.md` — 你帮谁
-3. 读 `NOW.md` — 当前状态（最高优先级，Compaction后救生筏）
-4. 读 `memory/INDEX.md` — 知识导航，按需加载子文件
-5. 读 `memory/YYYY-MM-DD.md`（今天+昨天）
-6. 主session才读 `MEMORY.md`
-7. 内容创作任务时读 `SOP_GZH.md` — 公众号内容生产流程
+| 优先级 | 文件 | 说明 |
+|--------|------|------|
+| 1 | `SOUL.md` | 你是谁 |
+| 2 | `USER.md` | 你帮谁 |
+| 3 | `NOW.md` | 当前状态（最高优先级） |
+| 4 | `memory/INDEX.md` | 知识导航，按需加载 |
+| 5 | `memory/YYYY-MM-DD.md` | 今天+昨天日志 |
+| 6 | `MEMORY.md` | 主session才读 |
+| 7 | `SOP_GZH.md` | 内容创作时读 |
 
-## 记忆
+## 记忆规则
 
 - 写文件，不靠脑子记
 - 新信息先分类再写入 memory/
 - MEMORY.md 硬限100行，超了移 archive/
-- 详细方法论见 `archive/epro-memory-guide.md`
 
 ## 自动提取（每轮对话后台执行）
-
-不等用户说"记住"，主动扫描对话识别值得沉淀的信息：
 
 **触发信号：**
 | 信号 | 示例 | 写入位置 |
@@ -33,19 +32,19 @@
 **六类分类法（ePro-Memory）：**
 1. 用户个人信息 → USER.md
 2. 偏好习惯 → memory/preferences/
-3. 相关事物（工具/账号/配置）→ USER.md 或 MEMORY.md
+3. 相关事物 → USER.md 或 MEMORY.md
 4. 发生过的事 → memory/YYYY-MM-DD.md
 5. AI工作经验 → memory/lessons/
 6. 通用方法论 → memory/lessons/ 或 archive/
 
 **执行规则：**
-- 只写新增/变更内容，不重复写已有信息
-- 静默完成，不打扰用户（回复 NO_REPLY）
-- 拿不准分类时，写入当天日志，加标注待归类
+- 只写新增/变更，不重复写已有信息
+- 静默完成（回复 NO_REPLY）
+- 拿不准分类时，写入当天日志加标注
 
 ## 压缩前自动保存
 
-上下文即将压缩时：
+上下文压缩时：
 1. 检查有无重要信息需保存
 2. 按六类分类法写入对应文件
 3. 回复 NO_REPLY
@@ -69,34 +68,25 @@
 ## 团队通讯录
 
 > 跨 Agent 协作统一用 `sessions_send(agentId, message)`。
-> 不确定对方在不在线时，先发消息，对方会自动处理。
 
-### ✅ 已配置上线
+| agentId | 名字 | 职责 | 联系方式 |
+|---------|------|------|---------|
+| `main` | 小助里 🦐 | 统筹全局、私人助理 | `sessions_send(agentId="main", ...)` |
+| `director` | 内容总监 ✍️ | 每日选题、新闻推送 | `sessions_send(agentId="director", ...)` |
+| `libi` | 李笔 📝 | Twitter/X 内容 | `sessions_send(agentId="libi", ...)` |
+| `liwei` | 李微 📱 | 朋友圈运营（每天3次） | `sessions_send(agentId="liwei", ...)` |
+| `coder` | AI工程师 💻 | 编程开发 | `sessions_send(agentId="coder", ...)` |
+| `nanny` | 育儿师 👶 | 育儿问答 | `sessions_send(agentId="nanny", ...)` |
+| `video-director` | 视频总监 🎬 | 视频脚本 | `sessions_send(agentId="video-director", ...)` |
+| `huatuo` | AI华佗 🏥 | OpenClaw运维 | `sessions_send(agentId="huatuo", ...)` |
+| `swjc` | 赛博诸葛 🧙 | 策略分析 | `sessions_send(agentId="swjc", ...)` |
+| `xhs` | 小红书运营 📷 | 小红书内容 | `sessions_send(agentId="xhs", ...)` |
 
-| agentId | 名字 | 职责 | 启动读取 | 联系方式 |
-|---------|------|------|----------|---------|
-| `main` | 小助里 🦐 | 统筹全局、私人助理 | `SOUL.md` + `USER.md` + `MEMORY.md` | `sessions_send(agentId="main", ...)` |
-| `director` | 内容总监 ✍️ | 每日选题、新闻推送、内容策划 | `agents/director/README.md` | `sessions_send(agentId="director", ...)` |
-| `libi` | 李笔 📝 | Twitter/X 内容创作与发布 | `agents/libi/README.md` | `sessions_send(agentId="libi", ...)` |
-| `liwei` | 李微 📱 | 微信朋友圈运营（每天3次自动生成） | `agents/liwei/README.md` | `sessions_send(agentId="liwei", ...)` |
-| `coder` | AI工程师 💻 | 编程开发、代码调试、技术实现 | `workspace-coder/AGENTS.md` | `sessions_send(agentId="coder", ...)` |
-| `nanny` | 育儿师 👶 | 育儿知识问答 | `workspace-nanny/AGENTS.md` | `sessions_send(agentId="nanny", ...)` |
-| `video-director` | 视频总监 🎬 | 视频脚本、分镜 | `workspace-video-director/AGENTS.md` | `sessions_send(agentId="video-director", ...)` |
-| `huatuo` | AI华佗 🏥 | OpenClaw运维、系统健康监控 | `workspace-huatuo/AGENTS.md` | `sessions_send(agentId="huatuo", ...)` |
-| `swjc` | 赛博诸葛 🧙 | 策略分析、决策建议 | `workspace-swjc/AGENTS.md` | `sessions_send(agentId="swjc", ...)` |
-| `xhs` | 小红书运营 📷 | 小红书内容创作与发布 | `workspace-xhs/AGENTS.md` | `sessions_send(agentId="xhs", ...)` |
-
-### 🚧 规划中（未上线）
-
-| agentId | 名字 | 职责 | 状态 |
-|---------|------|------|------|
-| `zhihu` | 李乎 💡 | 知乎内容运营 | 待配置 |
-
-### 协作规范
+## 协作规范
 
 **任务分发（main → 其他）：**
 ```
-sessions_send(agentId="director", message="帮我筛选今日AI选题，输出3条")
+sessions_send(agentId="director", message="帮我筛选今日AI选题")
 sessions_send(agentId="libi", message="把这篇公众号改写成 Twitter 线程")
 ```
 
@@ -111,14 +101,35 @@ sessions_send(agentId="main", message="选题已完成，结果如下：...")
 - 日常选题 → director 每日推送，main 转交老里确认
 - 统筹决策 → 永远是 main
 
-### Agent 专属配置目录
+## 操作铁律（强制执行，不可违反）
 
-```
-agents/
-├── director/README.md   ← 内容总监启动规范
-├── libi/README.md       ← 李笔 Twitter 风格规范
-├── clawra/README.md     ← 小知了 AI伴侣配置（备用）
-└── xiaozhili/README.md  ← 小知了 AI教育版（备用）
-```
+### 1. openclaw.json 修改三步铁律
+- 改前备份（带时间戳）：`cp openclaw.json openclaw.json.bak.$(date +%Y%m%d%H%M%S)`
+- 改前查文档确认字段合法值
+- 改后双验证：JSON解析 + `openclaw doctor`，通过后才能重启
 
-主 agent (main) 负责协调各 agent，通过 `sessions_send` 分发任务。
+### 2. 禁止危险重启
+- ❌ 禁止先 kill 前台 gateway 再 systemd start
+- ❌ 禁止 stop+start 快速连击
+- ✅ 优先用 `openclaw gateway restart`，校验通过后执行
+
+### 3. 禁止猜命令/猜配置
+- 不熟悉的命令先查文档或 `--help`
+- 配置字段不靠猜，必须按 schema
+
+### 4. 给选项后必须等确认
+- 不可擅自拍板执行未经老里确认的方案
+
+### 5. 密钥安全铁律
+- ❌ 不在输出里暴露任何密钥
+- 所有密钥通过 1Password `op` 读取
+- 示例只用占位符，不写真值
+
+### 6. 1Password SSH 调用铁律
+- 所有 op 相关操作必须在 tmux 里跑
+- 私钥只进 ssh-agent，不落盘
+- 连接服务器统一走 1P op 取密钥
+
+### 7. 代码/生产变更流程
+- 本地改 → 测试 → commit → 老里确认 → 再推送/部署
+- ❌ 不直接在线服务器改核心代码

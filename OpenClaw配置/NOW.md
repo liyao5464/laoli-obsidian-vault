@@ -1,41 +1,63 @@
 # NOW.md - 当前状态
 
-*最后更新：2026-03-05*
+**更新时间：** 2026-03-06 23:45
 
-## 🚨 紧急待办
+## 今日完成
 
-- [ ] 李微朋友圈推送：明天早上7点检查是否正常推送
-- [ ] video-director好话任务：检查是否完成
+### 飞书集成 ✅
+- 接入新飞书应用（cli_a909a1746c615cc1）
+- 创建飞书专用agent（feishu-assistant）
+- 定位：带货老炮（视频号带货专家）
+- 成功访问飞书表格（AI三农园艺爆款文案库）
+- 安装copywriting技能
 
-## 📋 今日完成
+### 文章发布 ✅
+1. 《AI最先淘汰的不是外卖员，而是年薪50万的你》- 小号草稿（4张插图）
+2. 《OpenClaw变聪明的12个核心技巧》- 主号草稿
+3. 《我被AI"反向提效"了》- 小号草稿
 
-- [x] OpenClaw tools配置研究 + 完整配置
-- [x] subagents.allowAgents配置
-- [x] 跨agent通信测试（8个agent说好话）
-- [x] bindings配置尝试（已恢复）
-- [x] 每日记忆提炼
+### 系统优化 ✅
+- 修复"每日晚10点总结"定时任务（动态日期）
+- 记录labnana图片生成API
+- 记录分段输出规则
+- 优化workspace配置（AGENTS.md + MEMORY.md）
 
-## 📅 计划中
+## 当前状态
 
-- [ ] 标准化"内容创作者包"技能包
-- [ ] 美妆竞品分析系统搭建（coder负责）
-- [x] 10个agent团队配置完成
+### Agent团队（11个）
+- main（小助里）- 统筹全局
+- director（内容总监）- 选题推送
+- libi（李笔）- Twitter
+- liwei（李微）- 朋友圈
+- coder（AI工程师）- 编程
+- nanny（育儿师）- 育儿
+- video-director（视频总监）- 视频
+- huatuo（AI华佗）- 运维
+- swjc（赛博诸葛）- 策略
+- xhs（小红书运营）- 小红书
+- **feishu-assistant（带货老炮）- 飞书带货** ✨新增
 
-## 💡 今日教训
+### 待发布初稿（14篇）
+- 内容工厂搭建教程
+- AI失忆问题
+- 国产AI横评
+- Trae零代码编程
+- OpenClaw经济文章
+- 其他9篇
 
-1. OpenClaw tools配置需要完整：`exec.ask: "off"` 是关键
-2. Bot配置和bindings需要同时有username才能工作
-3. subagent有5个并发限制
+### 自动化任务运行正常
+- Goal-Driven每日任务生成
+- director-daily-topics
+- Custom Morning Brief
+- 小知了AI新闻推送
+- Vault自动同步GitHub
 
-## 🔧 配置状态
+## 下一步
 
-- tools配置：✅ 已添加完整配置
-- subagents.allowAgents：✅ 已配置["*"]
-- bindings配置：❌ 保持原状（未修改）
-- 10个agent：✅ 已配置Bot和定时任务
+1. 为飞书助理配置更多技能（视频/图片生成）
+2. 测试飞书表格操作功能
+3. 继续完成待发布初稿
 
-## 📊 数据
+---
 
-- 主号文章：151篇草稿
-- 实验号文章：21篇草稿
-- 定时任务：10+个
+**核心原则：** 写文件，不靠脑子记 🦐

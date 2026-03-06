@@ -1,13 +1,13 @@
 # MEMORY.md - 长期记忆（硬限100行）
 
-## 核心规则（每次都看）
+## 核心规则
 
-- 发文章前必问：发主号还是实验室？不确定就问
-- 排版前删掉"备用标题"，不能进正文
-- HTML转换：使用 baoyu-post-to-wechat 技能自动处理
-- 封面提示词要简洁，太复杂会超时
+- 发文章前必问：发主号还是实验室？
+- 排版前删掉"备用标题"
+- HTML转换：使用 baoyu-post-to-wechat 技能
+- 封面提示词要简洁
 - 写文章前必读 `writing-guide.md` + `style-agent.md`
-- **发布主题：默认使用 claude 主题**（温润卡其色底，适合深度长文）
+- 发布主题：默认 claude 主题
 
 ## 双账号
 
@@ -16,97 +16,81 @@
 | 主号 | wxbde0f982acfe271b | a561d22a1227a810d66f13efa19bedb1 |
 | 小号 | wx22983d127a8ee206 | ea1ea206e7f690a3b87f153dabc56770 |
 
-主号=AI科普深度分析 / 小号=工作流工具类
+主号=AI科普 / 小号=工具类
 
 ## 写作风格索引
 
 - 风格文件：`style-agent.md` + `writing-guide.md`
-- 核心：接地气技术布道者，朋友聊天语气
-- 开头："大家好，我是老里"，50-100字切入
+- 核心：接地气，朋友聊天语气
+- 开头："大家好，我是老里"
 - 结尾：固定"感恩三连"模板
-- 禁止：书面腔、被动句、AI味、说教
+- 禁止：书面腔、被动句、AI味
 
-## Agent团队（10个已上线）
+## Agent团队（10个）
 
 | agentId | 名字 | 职责 |
 |---------|------|------|
-| main | 小助里🦐 | 统筹全局、私人助理 |
-| director | 内容总监✍️ | 每日选题、新闻推送 |
-| libi | 李笔📝 | Twitter/X内容 |
-| liwei | 李微📱 | 朋友圈运营（每天3次） |
-| coder | AI工程师💻 | 编程开发 |
-| nanny | 育儿师👶 | 育儿问答 |
-| video-director | 视频总监🎬 | 视频脚本 |
-| huatuo | AI华佗🏥 | OpenClaw运维、系统健康监控 |
-| swjc | 赛博诸葛🧙 | 策略分析 |
-| xhs | 小红书运营📷 | 小红书内容 |
+| main | 小助里🦐 | 统筹全局 |
+| director | 内容总监✍️ | 选题推送 |
+| libi | 李笔📝 | Twitter |
+| liwei | 李微📱 | 朋友圈 |
+| coder | AI工程师💻 | 编程 |
+| nanny | 育儿师👶 | 育儿 |
+| video-director | 视频总监🎬 | 视频 |
+| huatuo | AI华佗🏥 | 运维 |
+| swjc | 赛博诸葛🧙 | 策略 |
+| xhs | 小红书运营📷 | 小红书 |
 
-联系方式：`sessions_send(agentId="xxx", message="...")`
+联系：`sessions_send(agentId="xxx", message="...")`
 
-## 知识库索引（按需加载）
+## 知识库索引
 
-> 详细内容见 `memory/INDEX.md`，启动时扫描导航，按需读子文件。
+> 详见 `memory/INDEX.md`，按需加载
 
-| 类型 | 路径 | 说明 |
-|------|------|------|
-| 人物画像 | `memory/people/laoli-profile.md` | 老里基本信息 |
-| 用户偏好 | `memory/preferences/laoli-preferences.md` | 写作风格+禁止项 |
-| 朋友圈偏好 | `memory/preferences/moments-preferences.md` | 发送格式+内容形式 |
-| 发布经验 | `memory/lessons/wechat-publishing.md` | 流程+踩坑 |
-| 写作方法论 | `memory/lessons/writing-methodology.md` | 结构+标题公式 |
-| 记忆架构 | `memory/lessons/openclaw-memory-arch.md` | Token优化 |
-| 双账号决策 | `memory/decisions/2026-02-14-dual-accounts.md` | 账号配置 |
-| 微信文章抓取 | `memory/lessons/wechat-article-scraping.md` | 工具+方法 |
-| 配图生成技巧 | `memory/lessons/image-generation-tips.md` | 方向+风格 |
-| 朋友圈发送格式 | `memory/lessons/moments-send-format.md` | 代码块+复制按钮 |
+| 类型 | 路径 |
+|------|------|
+| 人物画像 | `memory/people/laoli-profile.md` |
+| 用户偏好 | `memory/preferences/laoli-preferences.md` |
+| 朋友圈偏好 | `memory/preferences/moments-preferences.md` |
+| 发布经验 | `memory/lessons/wechat-publishing.md` |
+| 写作方法论 | `memory/lessons/writing-methodology.md` |
+| 记忆架构 | `memory/lessons/openclaw-memory-arch.md` |
+| 双账号决策 | `memory/decisions/2026-02-14-dual-accounts.md` |
+| 微信抓取 | `memory/lessons/wechat-article-scraping.md` |
+| 配图技巧 | `memory/lessons/image-generation-tips.md` |
+| 朋友圈格式 | `memory/lessons/moments-send-format.md` |
 
-## 冷存储索引（用到再读）
+## 冷存储索引
 
 | 内容 | 路径 |
 |------|------|
-| 发布完整命令 | `archive/publish-playbook.md` |
-| 发布配置详情 | `archive/publish-config.md` |
+| 发布命令 | `archive/publish-playbook.md` |
+| 发布配置 | `archive/publish-config.md` |
 | 配图流程 | `archive/illustration-playbook.md` |
 | ePro方法论 | `archive/epro-memory-guide.md` |
-| 心跳/群聊规则 | `archive/heartbeat-groupchat-rules.md` |
 
-## 踩坑记录（防重犯）
+## 踩坑记录
 
-- ❌ 发错号（主号发成实验室）
+- ❌ 发错号
 - ❌ 封面提示词太复杂→超时
-- ❌ 忘删备用标题→发布失败
-- ❌ 上下文压缩导致指令丢失
-- ❌ 忘记用Claude主题→排版不对（提醒：读 memory/lessons/claude-theme-wechat.md）
+- ❌ 忘删备用标题→失败
+- ❌ 上下文压缩丢指令
 
-## 操作铁律（强制执行，不可违反）
+## 操作铁律
 
-### 1. openclaw.json 修改三步铁律
-- 改前备份（带时间戳）：`cp openclaw.json openclaw.json.bak.$(date +%Y%m%d%H%M%S)`
-- 改前查文档确认字段合法值
-- 改后双验证：JSON解析 + `openclaw doctor`，通过后才能重启
+### openclaw.json 修改
+- 改前备份：`cp openclaw.json openclaw.json.bak.$(date +%Y%m%d%H%M%S)`
+- 改前查文档
+- 改后验证：JSON + `openclaw doctor`
 
-### 2. 禁止危险重启
-- ❌ 禁止先 kill 前台 gateway 再 systemd start
-- ❌ 禁止 stop+start 快速连击
-- ✅ 优先用 `openclaw gateway restart`，校验通过后执行
+### 禁止危险操作
+- ❌ kill + systemd start
+- ❌ stop+start 快速连击
+- ✅ `openclaw gateway restart`
 
-### 3. 禁止猜命令/猜配置
-- 不熟悉的命令先查文档或 `--help`
-- 配置字段不靠猜，必须按 schema
-
-### 4. 给选项后必须等确认
-- 不可擅自拍板执行未经老里确认的方案
-
-### 5. 密钥安全铁律
-- ❌ 不在输出里暴露任何密钥
-- 所有密钥通过 1Password `op` 读取
-- 示例只用占位符，不写真值
-
-### 6. 1Password SSH 调用铁律
-- 所有 op 相关操作必须在 tmux 里跑
-- 私钥只进 ssh-agent，不落盘
-- 连接服务器统一走 1P op 取密钥
-
-### 7. 代码/生产变更流程
-- 本地改 → 测试 → commit → 老里确认 → 再推送/部署
-- ❌ 不直接在线服务器改核心代码
+### 其他铁律
+- 不猜命令/配置，先查文档
+- 给选项后必须等确认
+- 不暴露密钥，用 1Password `op`
+- op 操作必须在 tmux 里
+- 代码变更：本地改→测试→commit→确认→部署
