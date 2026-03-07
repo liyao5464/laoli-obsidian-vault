@@ -3,8 +3,9 @@
 ## 核心规则
 
 - 发文章前必问：发主号还是实验室？
-- 排版前删掉"备用标题"
-- HTML转换：使用 baoyu-post-to-wechat 技能
+- 发布流程：直接用wechat-api.ts发布.md文件
+- 配图方式：图片放articles/images/，markdown中用`images/img-XX.png`引用
+- wechat-api.ts自动上传图片并替换URL
 - 封面提示词要简洁
 - 写文章前必读 `writing-guide.md` + `style-agent.md`
 - 发布主题：默认 claude 主题
