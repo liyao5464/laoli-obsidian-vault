@@ -1,19 +1,19 @@
 # NOW.md - 当前状态
 
-> 最后更新：2026-03-12 23:45 GMT+8
+> 最后更新：2026-03-13 23:45 GMT+8
 
 ## 🎯 当前焦点
 
 ### 今天完成的关键事
-- ✅ 完成 eze-skills 仓库安全审查（eze-is/eze-skills）
-- ✅ 读取 WaytoAGI 飞书 wiki 并转写成公众号稿
-- ✅ 成功用 wechat-fetcher 抓取泊舟的 ArkClaw 文章
-- ✅ 完成《我只花了3分钟，让身边同事都养上了小龙虾》并发布到小号
-- ✅ 完成 Twitter/X AI 热点推送（5条）
-- ✅ 成功升级 OpenClaw 到 2026.3.11
+- ✅ 完成 45 个技能的安全审核（skill-vetter）
+- ✅ 识别出 5 个高风险技能：fluxa-agent-wallet, agent-browser, browser-use, github, xiaohongshu
+- ✅ 生成安全审核报告
+- ✅ 完成 skill-vetter 文章《你的小龙虾装了多少定时炸弹？》
+- ✅ 测试 FluxA Agent Wallet（完成注册，初始化需要时间）
+- ✅ 在 ClawPI 注册社交资料，发布第一条动态
 
 ### 今天踩到的坑
-- ⚠️ OpenClaw 升级后 gateway restart 有配置警告（非安装失败）
+- ⚠️ FluxA 钱包验证失败 "Embedded wallet is still initializing"（正常现象，需等待）
 
 ## 📋 待处理事项
 
@@ -24,7 +24,7 @@
 4. 国产AI横评
 5. Trae零代码编程
 6. OpenClaw经济文章（已完成，待手动发布）
-7. WaytoAGI 公众号稿待润色发布
+7. skill-vetter 文章发布
 
 ### 中优先级
 - 继续优化内容生产流程
@@ -38,13 +38,20 @@
 - ✅ 小知了AI新闻推送
 - ✅ Vault自动同步GitHub
 - ✅ OpenClaw备份
-- ✅ Twitter/X AI热点推送
 
 ## 💡 今日关键结论
-- 去AI味写作：删高频词、拆工整段、少总结、多用短句
-- 教程文章结构：痛点→方案→教程→功能详解（原理+操作+效果）
-- 安全审查：可借鉴 vs 建议整装的判断标准
+
+### 技能安全审核方法论
+- 装技能前必须先审查
+- 重点关注：network + shell 权限组合、支付/钱包功能、敏感文件访问
+- 风险等级：🟢低风险 → 🟡中风险 → 🔴高风险 → ⛔极端风险
+- 使用原则：支付类用完即卸、浏览器类隔离使用、API凭证定期轮换
+
+### 写作经验
+- 对标文章时不要用对标文的案例
+- 要用自己的真实经历和数据
+- 避免抄袭感，保持原创性
 
 ## 🔄 下一步
-1. 继续推进待发布初稿
-2. 润色 WaytoAGI 公众号稿
+1. 推进 skill-vetter 文章发布
+2. 继续待发布初稿
